@@ -1,15 +1,15 @@
-import React, { createContext, useMemo, useContext } from 'react';
+import * as React from 'react'
 import { useTranslation } from 'react-i18next';
 import {Callback, TFunction, i18n} from 'i18next'
 
-const LanguageContext = createContext< {
+const LanguageContext = React.createContext< {
   t?: TFunction<"translation", undefined>;
   i18n?: i18n;
   changeLanguage?: (lng?: string | undefined, callback?: Callback | undefined) => Promise<TFunction<"translation", undefined>>;
   currentLanguage?: string;
 }>({});
 
-const useLanguageProvider = () => useContext(LanguageContext);
+const useLanguageProvider = () => React.useContext(LanguageContext);
 
 /**
  * @example
@@ -30,7 +30,7 @@ const LanguageProvider: React.FC<{ namespaces: string[]; children: React.ReactNo
 
   const { t, i18n } = useTranslation(namespaces);
 
-  const contextValue = useMemo(
+  const contextValue = React.useMemo(
     () => ({
       t,
       i18n,
