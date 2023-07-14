@@ -1,3 +1,4 @@
+import React from "react";
 export interface LanguageEditorProps {
     defaultRowPerPage?: 5 | 10 | 15 | 20 | 25 | 50 | 100;
     onSave: (language: string, namespace: string, key: string, value: string) => void;
@@ -24,4 +25,4 @@ export interface LanguageEditorProps {
  * @example
  * onDelete={(language, namespace, keys) => console.log(language, namespace, keys)}
  */
-export default function LanguageEditor({ defaultRowPerPage, onSave, onDelete }: LanguageEditorProps): import("react/jsx-runtime").JSX.Element;
+export default function LanguageEditor({ defaultRowPerPage, onSave, onDelete }: LanguageEditorProps): React.JSX.Element;

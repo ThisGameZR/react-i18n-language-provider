@@ -7,4 +7,4 @@ export default function AlertDialog({ open, setOpen, title, content, cancelText,
     cancelText: string;
     confirmText: string;
     onConfirm: () => void;
-}): import("react/jsx-runtime").JSX.Element;
+}): React.JSX.Element;

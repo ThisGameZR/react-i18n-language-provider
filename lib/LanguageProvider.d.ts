@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Callback, TFunction, i18n } from 'i18next';
 declare const LanguageContext: React.Context<{
     t?: TFunction<"translation", undefined> | undefined;
